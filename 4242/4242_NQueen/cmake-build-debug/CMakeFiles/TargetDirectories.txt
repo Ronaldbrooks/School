@@ -1,0 +1,3 @@
+C:/Users/Ronald/ClionProjects/Genetic_NQueen/cmake-build-debug/CMakeFiles/Genetic_NQueen.dir
+C:/Users/Ronald/ClionProjects/Genetic_NQueen/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ronald/ClionProjects/Genetic_NQueen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
