@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    <color name="background1">#404040</color>
+	<color name="text1">#992828</color>
+	<color name="background2">#0000aa</color>
+	<color name="text2">#eeeeee</color>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Lab121024</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Lab 2/7: Introducing...</string>
+    <string name="myName">Ronald Brooks</string>
+    <string name="imageContentDescription">yourPicture</string>
+    <string name="majorLabel">Major:</string>
+    <string name="myMajor">Computer Science</string>
+    <string name="colorLabel">Favorite color:</string>
+    <string name="myFavoriteColor">Turquoise</string>
+
+</resources>
