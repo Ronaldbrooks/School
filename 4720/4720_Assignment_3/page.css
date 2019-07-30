@@ -1,0 +1,57 @@
+
+
+html
+{
+    background-color: #3AABB3;
+}
+
+body
+{
+    counter-reset: section;
+    list-style-type: none;
+}
+
+div.holder
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: #888;
+    border-style: solid;
+    padding: 10px;
+    font-size: x-large;
+}
+
+li::before
+{
+    counter-increment: section;
+    content: counters(section, ".") " ";
+}
+
+
+button
+{
+    font-size: large;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+table
+{
+    counter-reset: rowNumber;
+}
+
+table tr
+{
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before
+{
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}

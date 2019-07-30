@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\JetBrains\CLion 2016.3.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\4720assignment2.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\4720assignment2.dir/objects.a @CMakeFiles\4720assignment2.dir\objects1.rsp
+C:\MinGW\bin\g++.exe  -g   -Wl,--whole-archive CMakeFiles\4720assignment2.dir/objects.a -Wl,--no-whole-archive  -o 4720assignment2.exe -Wl,--out-implib,lib4720assignment2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\4720assignment2.dir\linklibs.rsp
