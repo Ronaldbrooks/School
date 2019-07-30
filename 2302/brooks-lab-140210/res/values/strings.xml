@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">brooks-lab-140210</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="len1">Length_1</string>
+    <string name="len2">Length_2</string>
+    <string name="len3">Length_3</string>
+    <string name="res">Result</string>
+    <string name="areas">Area</string>
+    <string name="perimeters">Perimeter</string>
+    <string name="inradi">inradius</string>
+
+</resources>
