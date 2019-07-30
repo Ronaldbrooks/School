@@ -1,0 +1,133 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <math.h>
+#include <string.h>
+
+int* get_data(int num_grades);
+float calc_average(int num_grades, int* grades);
+float calc_deviation(int* grades, int num_grades);
+float calc_median(int* grades, int num_grades);
+void display_average(float ave);
+void display_deviation(float std_dev);
+void display_median(float med);
+
+const int MAX_GRADE = 100;
+
+int main()
+{
+        //ask how many grades
+        int num_grades;
+        int* grades;
+        float ave;
+        float std_dev;
+        float med;
+
+        printf("enter the number of grades: ");
+        scanf("%d", &num_grades);
+        assert(num_grades > 0);
+
+        grades = get_data(num_grades);
+
+        //Calculate and display average
+        ave = calc_average(num_grades, grades);
+        display_average(ave);
+
+        //Calculate and display standard deviation
+        std_dev = calc_deviation(grades, num_grades);
+        display_deviation(std_dev);
+
+        //Calculate and display median
+        med = calc_median(grades, num_grades);
+        display_median(med);
+
+        return 0;
+}
+
+int* get_data(int num_grades)
+{
+        int *a = malloc(num_grades * sizeof(int));
+        int i;
+        for(i = 0; i < num_grades; i++)
+        {
+                printf("enter a grade: ");
+                int grade;
+                scanf("%d", &grade);
+                while(grade < 0 || grade > MAX_GRADE)
+                {
+                        printf("Grades need to be  >= 0 and <= 100\n");
+                        printf("enter a grade: ");
+                        scanf("%d", &grade);
+                }
+                a[i] = grade;
+        }
+        return a;
+}
+
+float calc_average(int num_grades, int* grades)
+{
+         float ave;
+         int sum = 0;
+         int i;
+         for(i = 0; i < num_grades; i++)
+                sum += grades[i];
+         ave = (float) sum / num_grades;
+         return ave;
+}
+
+void display_average(float ave)
+{
+        printf("average: %f\n", ave);
+}
+
+float calc_deviation(int* grades, int num_grades)
+{
+        float mean = 0.0, sum_deviation = 0.0;
+        int i;
+        for(i = 0; i < num_grades; i++)
+        {
+                mean+=grades[i];
+        }
+        mean = mean/num_grades;
+        for(i = 0; i < num_grades; ++i)
+        sum_deviation+=(grades[i] - mean)*(grades[i] - mean);
+        return sqrt(sum_deviation/num_grades);
+}
+
+void display_deviation(float std_dev)
+{
+        printf("Standard Deviation: %f\n", std_dev);
+}
+
+float calc_median(int* grades, int num_grades)
+{
+        float med;
+        float temp;
+        int i, j;
+        for(i = 0; i < num_grades; i++)
+        for(j = i; j < num_grades; j++)
+        {
+        if (grades[i] > grades[j])
+        {
+                temp = grades[j];
+                grades[j] = grades[i];
+                grades[i] = temp;
+                }
+        }
+        if (num_grades % 2 == 0)
+        {
+                med = (grades[num_grades/2] + grades[num_grades/2-1])/2;
+        }
+        else
+        {
+                med = grades[num_grades/2];
+}
+        return med;
+}
+
+void display_median(float med)
+{
+        printf("median: %f\n", med);
+}
+
+

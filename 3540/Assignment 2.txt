@@ -1,0 +1,44 @@
+# include <stdio.h>
+
+int main ()
+{
+  const int MAX_SIZE = 0;
+  const int MAX_GRADE = 100;
+  int grades[MAX_SIZE];
+  int num_grades = 0;
+  int done = 0;
+
+  printf("enter the number of grades: ");
+  scanf("%d", &MAX_SIZE);
+
+  while (!done)
+  {
+    printf("enter a grade: ");
+    int grade;
+    scanf("%d", &grade);
+    if (grade < 0)
+        done = 1;
+    else if (grade <= MAX_GRADE)
+     {
+         grades[num_grades] = grade;
+         num_grades++;
+         if (num_grades == MAX_SIZE)
+                done = 1;
+     }
+     else
+         printf("grades should be <= 100. Try again.\n");
+  }     
+  if (num_grades == 0)
+        printf("no grades to average\n");
+  else
+  {
+        int sum =0;
+        int i;
+        for(i = 0; i < num_grades; i++)
+                sum += grades[i];
+        float ave = (float)sum / num_grades;
+        printf ("average: %f\n", ave);
+  }
+  return 0;
+}
+
