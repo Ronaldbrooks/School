@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/widthTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/widthTV"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/widthET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/widthTV"
+        android:layout_alignBottom="@+id/widthTV"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="54dp"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/heightET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/heightTV"
+        android:layout_alignBottom="@+id/heightTV"
+        android:layout_alignLeft="@+id/widthET"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/heightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/widthTV"
+        android:layout_below="@+id/widthET"
+        android:layout_marginTop="24dp"
+        android:text="@string/heightTV"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/inradiusBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/perimeterBTN"
+        android:layout_alignBottom="@+id/perimeterBTN"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="41dp"
+        android:text="@string/inradiusLBL" />
+
+    <Button
+        android:id="@+id/perimeterBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/areaBTN"
+        android:layout_alignBottom="@+id/areaBTN"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/inradiusBTN"
+        android:text="@string/perimeterLBL" />
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/areaBTN"
+        android:layout_marginTop="53dp"
+        android:text="@string/resultTV"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/resultET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/resultTV"
+        android:layout_alignBottom="@+id/resultTV"
+        android:layout_alignLeft="@+id/heightET"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/areaBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/resultTV"
+        android:layout_below="@+id/heightET"
+        android:layout_marginTop="69dp"
+        android:text="@string/areaLBL" />
+
+</RelativeLayout>
