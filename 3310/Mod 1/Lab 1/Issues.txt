@@ -1,0 +1,4 @@
+Phone number issue (had to use text data type)
+
+address disappears from form so had to manually
+enter address for Sponge bob
