@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Ronald/ClionProjects/Problem4/implementations.h
+iostream
+-
+
+C:/Users/Ronald/ClionProjects/Problem4/main.cpp
+iostream
+-
+iomanip
+-
+time.h
+-
+conio.h
+-
+implementations.h
+C:/Users/Ronald/ClionProjects/Problem4/implementations.h
+
