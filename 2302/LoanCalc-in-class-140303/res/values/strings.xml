@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LoanCalc-in-class-140228</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="appInstructionsLBL">Enter the Loan Parameters</string>
+    <string name="airLBL">Annual Interest Rate</string>
+    <string name="air0LBL">5%</string>
+    <string name="air1LBL">8%</string>
+    <string name="air2LBL">12%</string>
+    <string name="air3LBL">18%</string>
+    <string name="numMonthsLBL">Number of Months</string>
+    <string name="initBalLBL">Initial Balance</string>
+    <string name="calculateLBL">Calculate</string>
+    <string name="paymentLBL">Monthly Payment</string>
+
+</resources>
