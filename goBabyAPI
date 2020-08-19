@@ -1,0 +1,31 @@
+import (
+    "encoding/json"
+    //"fmt"
+    "log"
+    "net/http"
+)
+
+type server struct {}
+
+type PersonID struct {
+    Name      string
+    Email      string
+}
+
+var person []PersonID
+
+func PersonEndPoint(w http.ResponseWriter, r *http.Request) {
+    json.NewEncoder(w).Encode(person)
+}
+
+func handleRequests() {
+    http.HandleFunc("/", PersonEndPoint)
+    log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func main(){
+    person = []PersonID{
+        PersonID{Name: "Kevin", Email: "Kevin@ultimatesoftware.com"},
+    }
+    handleRequests()
+}
